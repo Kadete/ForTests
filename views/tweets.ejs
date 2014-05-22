@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+	<h1><%= title %></h1>
+	<% for(var i = 0; i < tweets.length; ++i) { 
+		var t = tweets[i];
+	%>
+		<p><a href="/tweets/<%=t.id%>"><%= t.message %></a> by <a href="/tweets/author/<%=t.author%>"><i> <%= t.author %></a>
+		<hr/>
+	<% } %>
+  </body>
+</html>
